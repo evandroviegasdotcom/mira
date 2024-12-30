@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.small-title {
+    @apply font-bold text-zinc-600 capitalize  text-sm
+}

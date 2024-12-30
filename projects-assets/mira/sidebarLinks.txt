@@ -1,0 +1,5 @@
+export const links = [
+  { label: "Home", icon: <PiHouseBold />, route: "/app" },
+  { label: "My tasks", icon: <LuCheckCircle2 />, route: "/tasks" },
+  { label: "Members", icon: <TbUsers />, route: "/members" },
+];
