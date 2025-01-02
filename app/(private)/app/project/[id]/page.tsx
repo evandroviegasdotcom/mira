@@ -4,11 +4,17 @@ import React from "react";
 import New from "./components/tasks/new";
 import Views from "./components/tasks/views";
 
-export default async function Page({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    id
+  } = params;
+
   const project = await getProject(id);
   if (!project) return null;
 

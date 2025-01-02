@@ -1,10 +1,11 @@
 // app/api/auth/[auth0]/route.js
 import { createUser, findUserByEmail } from '@/services/user';
 import { handleAuth, handleCallback, handleLogin, Session } from '@auth0/nextjs-auth0';
+import { NextRequest } from 'next/server';
 
 // to force the login page to show up
-const customHandleLogin = async (req, res) => {
-    return handleLogin(req, res, {
+const customHandleLogin = async (req: NextRequest, res) => {
+    return handleLogin(req , res, {
         authorizationParams: { prompt: "login" }
     })
 }
